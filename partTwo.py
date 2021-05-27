@@ -27,8 +27,54 @@ def mainFunction(year):
         if year > 3:
             if year % 4 == 0:
                 status = 1
-                newStatus = isLeapYearCheck(printYearStatement, status)
-                return True
+                if year >= 100:
+                    if year % 100 == 0:
+                        status = 0
+                        newStatus = isLeapYearCheck(printYearStatement, status)
+                        return False
+                        """
+                        if year >= 400:
+                            if year % 400 == 0:
+                                status = 1
+                                newStatus = isLeapYearCheck(printYearStatement, status)
+                                if newStatus == True:
+                                    return True
+                                
+                                else:
+                                    return False
+                            else:
+                                status = 0
+                                newStatus = isLeapYearCheck(printYearStatement, status)
+                                if newStatus == True:
+                                    return True
+                                
+                                else:
+                                    return False
+                        else:
+                            status = 0
+                            newStatus = isLeapYearCheck(printYearStatement, status)
+                            if newStatus == True:
+                                return True
+                                
+                            else:
+                                return False
+                    else:
+                        status = 1
+                        newStatus = isLeapYearCheck(printYearStatement, status)
+                        if newStatus == True:
+                            return True
+                                
+                        else:
+                            return False
+                else:
+                    status = 1
+                    newStatus = isLeapYearCheck(printYearStatement, status)
+                    if newStatus == True:
+                        return True
+                                
+                    else:
+                        return False
+                """
             else:
                 status = 0
                 newStatus = isLeapYearCheck(printYearStatement, status)
