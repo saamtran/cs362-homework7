@@ -30,9 +30,6 @@ def mainFunction(year):
                 if year >= 100:
                     if year % 100 == 0:
                         status = 0
-                        newStatus = isLeapYearCheck(printYearStatement, status)
-                        return False
-                        """
                         if year >= 400:
                             if year % 400 == 0:
                                 status = 1
@@ -74,7 +71,6 @@ def mainFunction(year):
                                 
                     else:
                         return False
-                """
             else:
                 status = 0
                 newStatus = isLeapYearCheck(printYearStatement, status)
